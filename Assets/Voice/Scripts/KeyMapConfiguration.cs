@@ -82,6 +82,7 @@ public class KeyMapConfiguration : MonoBehaviour {
         foreach (var c in Commands) {
             typeof(KeyMapData).GetFields().Single(x => x.FieldType == typeof(KeyCode[]) && x.Name == c.gameObject.name).SetValue(KeyMap.Data, c.Keys);
         }
+        KeyMap.Save(string.Empty);
     }
     public void Clear() {
         RebuildCommands();
