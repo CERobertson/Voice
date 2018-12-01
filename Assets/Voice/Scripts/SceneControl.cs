@@ -4,9 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneControl : SharedPrefs {
+    public string InitialScene;
     void Awake() {
         DontDestroyOnLoad(gameObject);
-        LoadScene("NewCharacter");
+        LoadScene(InitialScene);
     }
     public static void LoadScene(string scene) {
         SceneManager.LoadScene(string.Format("{0}{1}/{2}", sceneRoot, Langauge, scene));

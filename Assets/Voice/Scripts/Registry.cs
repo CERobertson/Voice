@@ -7,6 +7,8 @@ public abstract class Registry<T,E> : SharedPrefs
     where T : Entry<E>
     where E : Named {
     protected abstract string Suffix { get; }
+    public T Entry;
+
     public void Serialize () {
        
     }

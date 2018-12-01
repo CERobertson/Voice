@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DialogueWaitForConfirmation : MonoBehaviour {
-    public event InputController.ConfirmationHandler OnConfirmation;
+    public event InputController.InputHandler OnConfirmation;
     void Start() {
         InputController.OnConfirmation += OnConfirmation;
     }

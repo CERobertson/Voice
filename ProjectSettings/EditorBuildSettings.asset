@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Voice/Scenes/English/Battle.unity
     guid: cc05a234d11477e4395e2a1fe42e5d78
+  - enabled: 1
+    path: Assets/Voice/Scenes/English/ControllerProbe.unity
+    guid: 749ee45bb8cadb94bb8c804694933842
+  - enabled: 1
+    path: Assets/Voice/Scenes/English/NewCharacter.unity
+    guid: 6f448bcf563189143879208dd976ed91
   m_configObjects: {}

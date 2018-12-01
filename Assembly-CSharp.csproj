@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Voice\Scripts\Command.cs" />
     <Compile Include="Assets\Voice\Scripts\ControllerProbe.cs" />
     <Compile Include="Assets\Voice\Scripts\DialogueWaitForConfirmation.cs" />
     <Compile Include="Assets\Voice\Scripts\DoomsdayBookControl.cs" />
@@ -68,6 +69,9 @@
     <Compile Include="Assets\Voice\Scripts\DoomsdayBookEntryData.cs" />
     <Compile Include="Assets\Voice\Scripts\Entry.cs" />
     <Compile Include="Assets\Voice\Scripts\InputController.cs" />
+    <Compile Include="Assets\Voice\Scripts\KeyMap.cs" />
+    <Compile Include="Assets\Voice\Scripts\KeyMapConfiguration.cs" />
+    <Compile Include="Assets\Voice\Scripts\KeyMapData.cs" />
     <Compile Include="Assets\Voice\Scripts\Named.cs" />
     <Compile Include="Assets\Voice\Scripts\Registry.cs" />
     <Compile Include="Assets\Voice\Scripts\SceneControl.cs" />
