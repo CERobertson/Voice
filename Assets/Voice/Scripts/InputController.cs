@@ -28,7 +28,7 @@ public class InputController : Registry<KeyMap,KeyMapData> {
             Confirmed();
         }
         if (QueryInput(Entry.Data.Back)) {
-            Confirmed();
+            Back();
         }
     }
     private bool QueryInput(KeyCode[] keys) {

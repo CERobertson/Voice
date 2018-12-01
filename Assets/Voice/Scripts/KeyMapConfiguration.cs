@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class KeyMapConfiguration : MonoBehaviour {
     public KeyMap KeyMap;
@@ -8,10 +9,19 @@ public class KeyMapConfiguration : MonoBehaviour {
     public GameObject CommandTemplate;
     public GameObject NextKeyMessageWindow;
     public ControllerProbe ControllerProbe;
+    public EventSystem EventSystem;
     private Command[] Commands;
     void Awake() {
         RebuildCommands();
+        InputController.OnBack += InputController_OnBack;
     }
+    void OnDestroy() {
+        InputController.OnBack -= InputController_OnBack;
+    }
+    private void InputController_OnBack() {
+        SceneControl.LoadScene("NewCharacter");
+    }
+
     private void RebuildCommands() {
         KeyMap = InputController.Singleton.Entry;
 
@@ -49,13 +59,16 @@ public class KeyMapConfiguration : MonoBehaviour {
                     c.Keys = t.ToArray();
                     c.SetValuesText();
                     Continue = false;
+                    break;
                 }
             }
             yield return null;
         }
     }
     private void Append(int id) {
+        EventSystem.enabled = false;
         StartCoroutine(AppendNextKeyDown(Commands[id]));
+        EventSystem.enabled = true;
     }
     private IEnumerator ReplaceNextKeyDown(Command c) {
         var Continue = true;
@@ -71,7 +84,9 @@ public class KeyMapConfiguration : MonoBehaviour {
         }
     }
     private void Replace(int id) {
+        EventSystem.enabled = false;
         StartCoroutine(ReplaceNextKeyDown(Commands[id]));
+        EventSystem.enabled = true;
     }
     private void Restore(int id) {
         var c = Commands[id];

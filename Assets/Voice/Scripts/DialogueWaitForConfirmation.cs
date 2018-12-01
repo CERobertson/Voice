@@ -7,7 +7,7 @@ public class DialogueWaitForConfirmation : MonoBehaviour {
     void Start() {
         InputController.OnConfirmation += OnConfirmation;
     }
-    private void OnDestroy() {
+    void OnDestroy() {
         InputController.OnConfirmation -= OnConfirmation;
     }
 }

@@ -52,5 +52,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Data:
-    Confirmation: 0d0000000d000000
-    Back: 
+    Confirmation: 0d000000
+    Back: 14010000
