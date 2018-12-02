@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 439611939}
   - component: {fileID: 439611938}
   - component: {fileID: 439611940}
+  - component: {fileID: 439611941}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -156,7 +157,6 @@ Transform:
   - {fileID: 1770830919}
   - {fileID: 2034861097}
   - {fileID: 1821419277}
-  - {fileID: 1114670418}
   - {fileID: 1665564872}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -177,6 +177,23 @@ MonoBehaviour:
   Entries: []
   DefaultKeyMap: {fileID: 1799763235191658, guid: 3c32868f9ef17594abfe2f62ad3bed62,
     type: 2}
+--- !u!114 &439611941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 439611937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d46e796a6ebdbb24883454f148439b7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Data:
+    CurrentScenario:
+      name: 
+      id: 0
+    name: <Uninitialized Game Data>
+    id: 0
 --- !u!1 &1001457827
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,51 +256,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1114670417
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1114670418}
-  - component: {fileID: 1114670419}
-  m_Layer: 0
-  m_Name: Saves
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1114670418
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1114670417}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 439611939}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1114670419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1114670417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12962c14611bff4478af89193ec76534, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Default: {fileID: 1026844424564222, guid: 45ed5f8bc44d5bd49acc1dde3570244c, type: 2}
-  Entry: {fileID: 0}
-  Entries: []
-  Profiles: []
-  CurrentSave: {fileID: 0}
 --- !u!1 &1346485911
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,6 +314,52 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1953312650}
   m_Script: {fileID: 11500000, guid: 7002515b3405f9c45a1ddeb01aef97b9, type: 3}
+--- !u!1 &1761637970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1883222619227652, guid: 90c4c6ee61dfa2b448177321a984b79f,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1761637971}
+  - component: {fileID: 1761637972}
+  m_Layer: 0
+  m_Name: S1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1761637971
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4075935697473826, guid: 90c4c6ee61dfa2b448177321a984b79f,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1761637970}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2034861097}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1761637972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114792530670894908, guid: 90c4c6ee61dfa2b448177321a984b79f,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1761637970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37576eeaa43ce18488e561330a58ad1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Data:
+    name: S1
+    id: 0
 --- !u!1 &1770830918
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,7 +448,6 @@ MonoBehaviour:
   Entry: {fileID: 0}
   Entries: []
   CurrentCharacter: {fileID: 0}
-  Saves: {fileID: 1114670419}
   DefaultCharacterName: <System>
 --- !u!1001 &1953312650
 Prefab:
@@ -547,6 +564,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1989101967}
+  - {fileID: 1761637971}
   m_Father: {fileID: 439611939}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

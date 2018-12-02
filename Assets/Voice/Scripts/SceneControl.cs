@@ -11,6 +11,7 @@ public class SceneControl : SharedPrefs {
         LoadScene(InitialScene);
     }
     public static void LoadScene(string scene) {
+        Game.Singleton.Data.CurrentScene = scene;
         SceneManager.LoadScene(string.Format("{0}{1}/{2}", sceneRoot, Langauge, scene));
     }
 }

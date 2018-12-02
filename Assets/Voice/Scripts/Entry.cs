@@ -27,6 +27,9 @@ public abstract class Entry<T> : MonoBehaviour
             }
         }
     }
+    public void Delete(int character) {
+        File.Delete(Path.Combine(Application.persistentDataPath, character.ToString() + "_" + Data.Id.ToString() + Suffix));
+    }
     string FileString(string input) {        
         return input + "_";
     }

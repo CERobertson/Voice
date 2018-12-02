@@ -1,8 +1,9 @@
 ﻿using System;
 
 [Serializable]
-public class SaveData : Named {
-    public DateTime DateSaved { get; set; }
+public class GameData : Named {
+    public string CurrentScene;
+    public ScenarioData CurrentScenario;
     public string name;
     public string Name { get { return name; } set { name = value; } }
     public int id;

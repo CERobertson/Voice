@@ -15,6 +15,9 @@ public class PlayerCharacterControl : MonoBehaviour {
             os.Add(o);
         }
         Characters.options = os;
+        if (Characters.options.Count > 0) {
+            PlayerCharacters.Singleton.ChangeCharacter(1);
+        }
     }
     public void CharacterChanged(string value) {
         PlayerCharacters.Singleton.NewCharacter(value);

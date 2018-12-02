@@ -68,11 +68,12 @@
     <Compile Include="Assets\Voice\Scripts\DoomsdayBookEntry.cs" />
     <Compile Include="Assets\Voice\Scripts\DoomsdayBookEntryData.cs" />
     <Compile Include="Assets\Voice\Scripts\Entry.cs" />
+    <Compile Include="Assets\Voice\Scripts\Game.cs" />
+    <Compile Include="Assets\Voice\Scripts\GameData.cs" />
     <Compile Include="Assets\Voice\Scripts\InputController.cs" />
     <Compile Include="Assets\Voice\Scripts\KeyMap.cs" />
     <Compile Include="Assets\Voice\Scripts\KeyMapConfiguration.cs" />
     <Compile Include="Assets\Voice\Scripts\KeyMapData.cs" />
-    <Compile Include="Assets\Voice\Scripts\LoadControl.cs" />
     <Compile Include="Assets\Voice\Scripts\MenuControl.cs" />
     <Compile Include="Assets\Voice\Scripts\MenuRunner.cs" />
     <Compile Include="Assets\Voice\Scripts\Named.cs" />
@@ -82,7 +83,6 @@
     <Compile Include="Assets\Voice\Scripts\PlayerCharacters.cs" />
     <Compile Include="Assets\Voice\Scripts\Registry.cs" />
     <Compile Include="Assets\Voice\Scripts\Save.cs" />
-    <Compile Include="Assets\Voice\Scripts\SaveControl.cs" />
     <Compile Include="Assets\Voice\Scripts\SaveData.cs" />
     <Compile Include="Assets\Voice\Scripts\Saves.cs" />
     <Compile Include="Assets\Voice\Scripts\Scenario.cs" />

@@ -5,8 +5,8 @@ using UnityEngine;
 public class MenuRunner : MonoBehaviour {
     public ScenarioControl Scenario;
     public MenuControl Menu;
-    public SaveControl Save;
-    public LoadControl Load;
+    public Saves Save;
+    public Saves Load;
     private bool toggle;
     private Stack<GameObject> BackStack;
 
@@ -24,11 +24,13 @@ public class MenuRunner : MonoBehaviour {
     }
 
     private void InputController_OnBack() {
-        if (toggle && BackStack.Count == 0) {
+        if (!toggle && BackStack.Count == 0) {
             Toggle();
         }
-        else if (toggle) {
+        else if (!toggle) {
             BackStack.Pop().SetActive(false);
+            toggle = !toggle;
+            Menu.gameObject.SetActive(toggle);
         }
     }
     private void InputController_OnMenu() {
@@ -44,10 +46,16 @@ public class MenuRunner : MonoBehaviour {
     }
     private void SaveMenu() {
         BackStack.Push(Save.gameObject);
+        toggle = !toggle;
+        Menu.gameObject.SetActive(toggle);
         Save.gameObject.SetActive(true);
+        Save.RebuildSaves();
     }
     private void LoadMenu() {
         BackStack.Push(Load.gameObject);
+        toggle = !toggle;
+        Menu.gameObject.SetActive(toggle);
         Load.gameObject.SetActive(true);
+        Load.RebuildSaves();
     }
 }

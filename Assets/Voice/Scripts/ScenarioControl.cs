@@ -7,4 +7,12 @@ public class ScenarioControl : MonoBehaviour {
         pause = !pause;
         Time.timeScale = 1.0f * Convert.ToSingle(pause);
     }
+    void Awake() {
+        
+    }
+    void Update() {
+        if (!pause) {
+
+        }
+    }
 }
