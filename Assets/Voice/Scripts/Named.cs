@@ -1,14 +1,6 @@
 ﻿using System;
 
-[Serializable]
-public abstract class Named {
-    private string name;
-    public string Name {
-        get {
-            return name;
-        }
-        set {
-            name = value;
-        }
-    }
+public interface Named {
+    string Name { get; set; }
+    int Id { get; set; }
 }

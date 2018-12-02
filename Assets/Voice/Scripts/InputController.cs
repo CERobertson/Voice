@@ -21,7 +21,7 @@ public class InputController : Registry<KeyMap,KeyMapData> {
         if (Singleton == null) {
             Singleton = this;
         }
-        Entry.Load(string.Empty);
+        Entry.Load(0);
     }
     void Update() {
         if (QueryInput(Entry.Data.Confirmation)) {

@@ -1,10 +1,7 @@
 ﻿using System;
-using UnityEngine;
 
 [Serializable]
-public class KeyMapData : Named {
-    public KeyCode[] Confirmation;
-    public KeyCode[] Back;
+public class PlayerCharacterData : Named {
 
     public string name;
     public string Name { get { return name; } set { name = value; } }

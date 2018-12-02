@@ -73,6 +73,10 @@
     <Compile Include="Assets\Voice\Scripts\KeyMapConfiguration.cs" />
     <Compile Include="Assets\Voice\Scripts\KeyMapData.cs" />
     <Compile Include="Assets\Voice\Scripts\Named.cs" />
+    <Compile Include="Assets\Voice\Scripts\PlayerCharacter.cs" />
+    <Compile Include="Assets\Voice\Scripts\PlayerCharacterControl.cs" />
+    <Compile Include="Assets\Voice\Scripts\PlayerCharacterData.cs" />
+    <Compile Include="Assets\Voice\Scripts\PlayerCharacters.cs" />
     <Compile Include="Assets\Voice\Scripts\Registry.cs" />
     <Compile Include="Assets\Voice\Scripts\SceneControl.cs" />
     <Compile Include="Assets\Voice\Scripts\SceneRunner.cs" />

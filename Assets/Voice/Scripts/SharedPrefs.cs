@@ -15,16 +15,16 @@ public class SharedPrefs : MonoBehaviour {
             langauge = value;
         }
     }
-    public static readonly string savePreference = "Save";
-    public static readonly string defaultSave = DateTime.Now.ToString("yyyMMDDhhmmss");
-    private string save;
-    public string Save {
-        get {
-            return PlayerPrefs.GetString(savePreference, defaultSave);
-        }
-        set {
-            PlayerPrefs.SetString(langaugePreference, value);
-            save = value;
-        }
-    }
+    //public static readonly string savePreference = "Save";
+    //public static readonly string defaultSave = DateTime.Now.ToString("yyyMMDDhhmmss");
+    //private string save;
+    //public string Save {
+    //    get {
+    //        return PlayerPrefs.GetString(savePreference, defaultSave);
+    //    }
+    //    set {
+    //        PlayerPrefs.SetString(langaugePreference, value);
+    //        save = value;
+    //    }
+    //}
 }
