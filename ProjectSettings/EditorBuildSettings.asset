@@ -20,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Voice/Scenes/English/Scene0.unity
     guid: 54d50d8995d8cef4f835c5e0b87acfa3
+  - enabled: 0
+    path: Assets/Voice/Scenes/English/Save.unity
+    guid: a610d0b03b686da4a8b7a61f3260a4f8
+  - enabled: 0
+    path: Assets/Voice/Scenes/English/Menu.unity
+    guid: e10210024df1609429acd122d4cb513e
+  - enabled: 0
+    path: Assets/Voice/Scenes/English/Load.unity
+    guid: 312e162a42566ac469f0945eae0d8ce9
   m_configObjects: {}

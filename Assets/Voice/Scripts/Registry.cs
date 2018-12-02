@@ -12,18 +12,18 @@ public abstract class Registry<T,E> : SharedPrefs
     public GameObject Default;
     public T Entry;
     public E[] Entries;
-    //public void Save() {
-    //    Save(PlayerCharacters.CurrentCharacter);
-    //}
+    public void Save() {
+        Save(PlayerCharacters.Singleton.CurrentCharacter.Data.Id);
+    }
     public void Save(int character) {
         var bFormatter = new BinaryFormatter();
         using (var ms = MemoryStream(character)) {
             bFormatter.Serialize(ms, Entries);
         }
     }
-    //public void Load() {
-    //    Load(PlayerCharacters.CurrentCharacter);
-    //}
+    public void Load() {
+        Load(PlayerCharacters.Singleton.CurrentCharacter.Data.Id);
+    }
     public void Load(int character) {
         var bFormatter = new BinaryFormatter();
         using (var ms = MemoryStream(character)) {
@@ -35,15 +35,15 @@ public abstract class Registry<T,E> : SharedPrefs
     string FileString(string input) {
         return input ;
     }
-    private string[] DistinctCharacters() {
-        return Directory.GetFiles(Application.persistentDataPath).Select(x => {
-            var paths = x.Split('\\');
-            var file = paths[paths.Length - 1];
-            return file.Split('_')[0];
-        })
-        .Distinct().ToArray();
-    }
     private Stream MemoryStream(int character) {
         return File.Open(Path.Combine(Application.persistentDataPath, character.ToString() + "_" + Suffix), FileMode.OpenOrCreate);
     }
+    //private string[] DistinctCharacters() {
+    //    return Directory.GetFiles(Application.persistentDataPath).Select(x => {
+    //        var paths = x.Split('\\');
+    //        var file = paths[paths.Length - 1];
+    //        return file.Split('_')[0];
+    //    })
+    //    .Distinct().ToArray();
+    //}
 }

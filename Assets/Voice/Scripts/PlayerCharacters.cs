@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerCharacters : Registry<PlayerCharacter, PlayerCharacterData> {
     protected override string Suffix { get { return ".Voice.pcs"; } }
     public PlayerCharacter CurrentCharacter;
+    public Saves Saves;
     public static PlayerCharacters Singleton { get; private set; }
     public string DefaultCharacterName = "<System>";
     void Awake() {
@@ -32,6 +33,7 @@ public class PlayerCharacters : Registry<PlayerCharacter, PlayerCharacterData> {
         for (int i = 1; i < Entries.Length; i++) {
             CreateEntry(i);
         }
+        Saves.gameObject.SetActive(true);
     }
     public void ChangeCharacter(int i) {
         ChangeCharacter(new PlayerCharacterData {
@@ -65,11 +67,12 @@ public class PlayerCharacters : Registry<PlayerCharacter, PlayerCharacterData> {
             CreateEntry(Entries.Length - 1);
             Save(0);
             ChangeCharacter(Entries[Entries.Length - 1]);
+            Saves.RebuildSaveProfiles();
         }
     }
     private void CreateEntry(int i) {
         var previous_player = transform.Find(Entries[i].Name);
-        if (previous_player != null) {
+        if (previous_player != null && previous_player.GetComponent<PlayerCharacter>().Data.Id == i) {
             Destroy(previous_player.gameObject);
         }
         var go_player = Instantiate(Default, transform);

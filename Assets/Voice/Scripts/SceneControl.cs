@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneControl : SharedPrefs {
     public string InitialScene;
+    public MenuControl MenuControl;
     void Awake() {
         DontDestroyOnLoad(gameObject);
         LoadScene(InitialScene);

@@ -17,6 +17,12 @@ public class InputController : Registry<KeyMap,KeyMapData> {
             OnBack();
         }
     }
+    public static event InputHandler OnMenu;
+    public static void Menu() {
+        if (OnMenu != null) {
+            OnMenu();
+        }
+    }
     void Awake() {
         if (Singleton == null) {
             Singleton = this;
@@ -29,6 +35,9 @@ public class InputController : Registry<KeyMap,KeyMapData> {
         }
         if (QueryInput(Entry.Data.Back)) {
             Back();
+        }
+        if (QueryInput(Entry.Data.Menu)) {
+            Menu();
         }
     }
     private bool QueryInput(KeyCode[] keys) {
