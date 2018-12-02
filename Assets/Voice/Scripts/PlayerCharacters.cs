@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerCharacters : Registry<PlayerCharacter, PlayerCharacterData> {
     protected override string Suffix { get { return ".Voice.pcs"; } }
-    public static PlayerCharacter CurrentCharacter;
+    public PlayerCharacter CurrentCharacter;
     public static PlayerCharacters Singleton { get; private set; }
     public string DefaultCharacterName = "<System>";
     void Awake() {
@@ -32,6 +32,12 @@ public class PlayerCharacters : Registry<PlayerCharacter, PlayerCharacterData> {
         for (int i = 1; i < Entries.Length; i++) {
             CreateEntry(i);
         }
+    }
+    public void ChangeCharacter(int i) {
+        ChangeCharacter(new PlayerCharacterData {
+            Id = i,
+            name = Entries[i].name
+        });
     }
     public void ChangeCharacter(PlayerCharacterData c) {
         var new_playercharacter = transform.Find(c.name);

@@ -19,4 +19,8 @@ public class PlayerCharacterControl : MonoBehaviour {
     public void CharacterChanged(string value) {
         PlayerCharacters.Singleton.NewCharacter(value);
     }
+    public void OnValueChanged(int i) {
+        PlayerCharacters.Singleton.ChangeCharacter(i + 1);
+        InputController.Confirmed();
+    }
 }

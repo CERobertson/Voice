@@ -6,13 +6,13 @@ public class InputController : Registry<KeyMap,KeyMapData> {
     protected override string Suffix { get { return ".Voice.KeyMap"; } }
     public delegate void InputHandler();
     public static event InputHandler OnConfirmation;
-    private static void Confirmed() {
+    public static void Confirmed() {
         if (OnConfirmation != null) {
             OnConfirmation();
         }
     }
     public static event InputHandler OnBack;
-    private static void Back() {
+    public static void Back() {
         if (OnBack != null) {
             OnBack();
         }
