@@ -19,7 +19,7 @@ public class KeyMapConfiguration : MonoBehaviour {
         InputController.OnBack -= InputController_OnBack;
     }
     private void InputController_OnBack() {
-        SceneControl.LoadScene("NewCharacter");
+        SceneControl.Singleton.LoadScene("NewCharacter");
     }
 
     private void RebuildCommands() {

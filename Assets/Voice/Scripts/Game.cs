@@ -17,7 +17,7 @@ public class Game : Entry<GameData> {
     public void LoadGame(SaveData s) {
         Data.Id = s.Id;
         Load(PlayerCharacters.Singleton.CurrentCharacter.Data.Id);
-        SceneControl.LoadScene(Data.CurrentScene);
+        SceneControl.Singleton.LoadScene(Data.CurrentScene);
     }
     public void DeleteGame(SaveData s) {
         Data.Id = s.Id;

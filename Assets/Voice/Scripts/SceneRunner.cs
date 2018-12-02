@@ -22,7 +22,7 @@ public class SceneRunner : MonoBehaviour {
             index++;
         }
         else {
-            SceneControl.LoadScene(NextScene);
+            SceneControl.Singleton.LoadScene(NextScene);
         }
     }
 }
